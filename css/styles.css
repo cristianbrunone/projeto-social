@@ -1,42 +1,241 @@
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
+/* ==========================
+   CONFIGURAÇÃO GLOBAL 
+   ========================== */
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #f2f2f2;
+  overflow-y: scroll;
+  color: #616161; /* Cor de texto cinza */
 }
 
-.video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Aplica a fonte "Poppins" para títulos, parágrafos, links e botões */
+h1,
+h2,
+h3,
+p,
+a,
+button {
+  font-family: "Playfair Display", serif;
 }
 
+/* ==========================
+CONTAINER DA IMAGEM DE FUNDO ========================== */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Definir a altura completa da tela */
+  overflow: hidden;
+  background-image: url("../assets/home.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ==========================
+   NAVBAR (POSICIONADO EM CIMA DA IMAGEM)
+   ========================== */
+.navbar {
+  position: fixed; /* Fixa a navbar no topo */
+  width: 100%;
+  bottom: 2px;
+  left: 0;
+  z-index: 100;
+  background: transparent;
+}
+
+/* Container Flutuante com efeito backdrop-filter */
+.floating-container {
+  position: fixed; /* Alterado para fixed para garantir que fique fixo no topo */
+  top: 20px; /* Ajuste para posicionar a navbar o mais no topo possível */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Ajustado para largura total */
+  max-width: 80%; /* Maximiza a largura em telas grandes */
+  height: 6%;
+  padding: 15px; /* Menos espaçamento para melhorar o visual */
+  background: rgba(117, 117, 117, 0.3); /* Fundo semitransparente */
+  border-radius: 50px; /* Bordas arredondadas com raio de 50px */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* Suporte para Safari */
+  z-index: 1040; /* Posicionado abaixo da navbar (z-index 1050) */
+  text-align: center;
+}
+
+.corHome {
+  color: #303f9f;
+}
+
+.corHome2 {
+  background-color: #d32f2f;
+  color: #ffff;
+}
+
+.corHome2:hover {
+  background-color: #911111;
+  color: #ffff;
+}
+
+.floating-container2 {
+  position: fixed; /* Alterado para fixed para garantir que fique fixo no topo */
+  top: 20px; /* Ajuste para posicionar a navbar o mais no topo possível */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Ajustado para largura total */
+  max-width: 80%; /* Maximiza a largura em telas grandes */
+  height: 6%;
+  padding: 15px; /* Menos espaçamento para melhorar o visual */
+  background: #303f9f; /* Fundo semitransparente */
+  border-radius: 50px; /* Bordas arredondadas com raio de 50px */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* Suporte para Safari */
+  z-index: 1040; /* Posicionado abaixo da navbar (z-index 1050) */
+  text-align: center;
+}
+
+/* ==========================
+   HERO COM SOBREPOSIÇÃO NA IMAGEM
+   ========================== */
 .hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Sobreposição escura para melhorar a leitura */
+}
+
+.hero-title {
+  font-size: 4rem; /* Aumenta o tamanho do título */
+  font-weight: 900; /* Deixa o texto bem pesado */
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destacar */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem; /* Aumenta o tamanho do subtítulo */
+  font-weight: 700; /* Peso médio-alto para diferenciar do título */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra suave */
 }
 
 .hero .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+/* ==========================
+   CARTÕES (GERAIS)
+   ========================== */
 .card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  border: 1px solid #f5f5dc; /* Bordas sutis usando bege */
+  background-color: #ffffff; /* Fundo branco para os cards */
 }
 
+/* Efeito ao passar o mouse sobre os cards */
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================
+   TELA DE LOGIN
+   ========================== */
+.login-page {
+  position: relative;
+  background: url("../assets/igualdade.png") no-repeat center center/cover;
+  height: 100vh; /* ou o tamanho desejado */
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.login-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilização do card de login com gradiente azul-céu */
+.login-card {
+  width: 360px;
+  height: 380px;
+  background: linear-gradient(to bottom, #b7d3ff, #ffffff98, #ffffff2c);
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ==========================
+   CAMPOS DE LOGIN E INPUTS
+   ========================== */
+
+/* Grupo de input para parecer um único elemento */
+.input-group {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  overflow: hidden; /* Evita bordas separadas nos elementos internos */
+}
+
+/* Estilização do ícone dentro do input (ex: ícone de usuário/senha) */
+.input-group-text {
+  background: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  color: #616161; /* Cor de texto cinza para o ícone */
+}
+
+/* Ajuste nos campos de entrada dentro do grupo */
+.input-group .form-control {
+  border: none;
+  padding: 10px;
+  box-shadow: none; /* Remove sombras indesejadas */
+}
+
+/* Efeito ao focar no campo de entrada */
+.input-group:focus-within {
+  border-color: #616161; /* Cor de borda cinza ao focar */
+  box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
+}
+
+/* Ícone do olho para alternar a visibilidade da senha */
+.toggle-password {
+  cursor: pointer;
+}
+
+/* ==========================
+   RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS
+   ========================== */
+@media (max-width: 767px) {
+  .floating-container {
+    width: 100%; /* Largura menor em dispositivos móveis */
+    height: 7%;
+    top: 10px;
+  }
+
+  .navbar {
+    position: fixed; /* Fixa a navbar no topo */
+    width: 100%;
+    top: 3px;
+    left: 0;
+    z-index: 100;
+    background: transparent;
+  }
 }

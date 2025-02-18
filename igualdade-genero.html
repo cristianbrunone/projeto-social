@@ -1,64 +1,249 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Igualdade de Gênero</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Cidadania Ativa</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="justica-social.html">Justiça Social</a></li>
-          <li class="nav-item"><a class="nav-link active" href="igualdade-genero.html">Igualdade de Gênero</a></li>
-          <li class="nav-item"><a class="nav-link" href="inclusao-social.html">Inclusão Social</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Banner -->
-  <div class="banner">
-    <h1>Igualdade de Gênero</h1>
-  </div>
-
-  <!-- Conteúdo -->
-  <main class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card shadow-lg">
-          <div class="card-body">
-            <h2 class="text-primary">Por que a Igualdade de Gênero é Importante?</h2>
-            <p>A igualdade de gênero é um direito humano fundamental e uma base essencial para um mundo mais justo. Isso significa garantir oportunidades iguais para todos, independentemente do gênero.</p>
-            <h4 class="mt-4">Como Podemos Contribuir?</h4>
-            <ul>
-              <li>Educação para a equidade de gênero</li>
-              <li>Promoção de lideranças femininas</li>
-              <li>Combate à violência de gênero</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Igualdade de Gênero</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="floating-container2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">Cidadania Ativa</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="justica-social.html"
+                  >Justiça Social</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" href="igualdade-genero.html"
+                  >Igualdade de Gênero</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="inclusao-social.html"
+                  >Inclusão Social</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="login.html">Login</a>
+              </li>
             </ul>
-            <a href="justica-social.html" class="btn btn-primary mt-3">Saiba Mais</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+      <div class="container text-center text-white pt-5">
+        <h1 class="text-dark pt-5 display-5">Igualdade de Gênero</h1>
+        <p class="text-secondary">Promovendo direitos iguais e oportunidades justas para todos.</p>
+      </div>
+    
+
+    <!-- Seção de Informações -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2>O que é Igualdade de Gênero?</h2>
+          <p>
+            Igualdade de gênero significa garantir que todas as pessoas,
+            independentemente do gênero, tenham os mesmos direitos,
+            oportunidades e reconhecimento na sociedade.
+          </p>
+          <p>
+            Isso envolve a eliminação da discriminação e promoção de políticas
+            que assegurem equidade no trabalho, na educação e na vida social.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="assets/igualdade.jpg"
+            class="img-fluid rounded"
+            alt="Igualdade de Gênero"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Informativos -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Aspectos Essenciais</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <i class="bi bi-briefcase-fill fs-1 text-primary"></i>
+              <h5 class="card-title mt-3">Igualdade no Trabalho</h5>
+              <p class="card-text">
+                Garantir oportunidades justas e equitativas no mercado de
+                trabalho para todas as pessoas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <i class="bi bi-book-fill fs-1 text-success"></i>
+              <h5 class="card-title mt-3">Educação para Todos</h5>
+              <p class="card-text">
+                Acesso igualitário à educação, incentivando meninas e meninos a
+                seguirem seus sonhos sem barreiras.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <i class="bi bi-people-fill fs-1 text-danger"></i>
+              <h5 class="card-title mt-3">Direitos e Respeito</h5>
+              <p class="card-text">
+                Combate à discriminação e violência de gênero, promovendo uma
+                sociedade mais justa e segura.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Cidadania Ativa. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    </section>
+  </body>
 </html>
+
+   <!-- Accordion sobre Igualdade de Gênero -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Entendendo a Igualdade de Gênero</h2>
+      <div class="accordion" id="accordionIgualdadeGenero">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+            >
+              O que é Igualdade de Gênero?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionIgualdadeGenero"
+          >
+            <div class="accordion-body">
+              <p>
+                A igualdade de gênero significa garantir os mesmos direitos,
+                oportunidades e tratamento para todas as pessoas,
+                independentemente do gênero, promovendo um mundo mais justo e
+                equilibrado.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+            >
+              Desafios na Sociedade
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionIgualdadeGenero"
+          >
+            <div class="accordion-body">
+              <p>
+                Mulheres e pessoas não-binárias ainda enfrentam desigualdades em
+                diversas áreas, como mercado de trabalho, representatividade
+                política e direitos reprodutivos. É essencial combater essas
+                disparidades para alcançar uma sociedade mais justa.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+            >
+              Como Podemos Promover a Igualdade?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionIgualdadeGenero"
+          >
+            <div class="accordion-body">
+              <p>
+                Incentivar a educação inclusiva, apoiar políticas de equidade
+                salarial, combater a violência de gênero e promover a
+                representatividade feminina são algumas das formas de
+                impulsionar a igualdade de gênero na sociedade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+        <h2>Depoimentos</h2>
+        <blockquote class="blockquote">
+          <p>
+            "A luta pela igualdade de gênero é essencial para garantir que todos
+            tenham as mesmas oportunidades, sem discriminação."
+          </p>
+          <footer class="blockquote-footer">Carla Souza</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p>&copy; 2025 Cidadania Ativa. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+

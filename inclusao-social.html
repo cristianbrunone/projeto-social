@@ -1,64 +1,251 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inclusão Social</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inclusão Social</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Cidadania Ativa</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="justica-social.html">Justiça Social</a></li>
-          <li class="nav-item"><a class="nav-link" href="igualdade-genero.html">Igualdade de Gênero</a></li>
-          <li class="nav-item"><a class="nav-link active" href="inclusao-social.html">Inclusão Social</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Banner -->
-  <div class="banner">
-    <h1>Inclusão Social</h1>
-  </div>
-
-  <!-- Conteúdo -->
-  <main class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card shadow-lg">
-          <div class="card-body">
-            <h2 class="text-primary">O que é Inclusão Social?</h2>
-            <p>Inclusão social é garantir que todas as pessoas tenham acesso a oportunidades e direitos, independentemente de sua condição social, deficiência ou origem.</p>
-            <h4 class="mt-4">Como Podemos Promover a Inclusão?</h4>
-            <ul>
-              <li>Políticas públicas acessíveis</li>
-              <li>Ambientes de trabalho inclusivos</li>
-              <li>Combate à discriminação</li>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="floating-container2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">Cidadania Ativa</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="justica-social.html"
+                  >Justiça Social</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="igualdade-genero.html"
+                  >Igualdade de Gênero</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" href="inclusao-social.html"
+                  >Inclusão Social</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="login.html">Login</a>
+              </li>
             </ul>
-            <a href="justica-social.html" class="btn btn-primary mt-3">Saiba Mais</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Imagem de Destaque -->
+    <div class="container text-center text-white pt-5">
+      <h1 class="text-dark mt-4 pt-5 display-5">Inclusão Social</h1>
+      <p class="text-secondary">
+        Construindo uma sociedade mais acessível e justa para todos.
+      </p>
+    </div>
+
+    <!-- Seção de Informações -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="text-secondary pt-4">O que é Inclusão Social?</h2>
+          <p class="text-secondary">
+            Inclusão social significa garantir que todas as pessoas,
+            independentemente de suas condições socioeconômicas, tenham acesso
+            igualitário a direitos, serviços e oportunidades.
+          </p>
+          <p>
+            Esse conceito está diretamente ligado ao combate à desigualdade e à
+            promoção da diversidade em todas as esferas da sociedade.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="assets/inclusao.jpg"
+            class="img-fluid rounded"
+            alt="Inclusão Social"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Informativos -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Aspectos Essenciais</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <i class="bi bi-hand-thumbs-up-fill fs-1 text-primary"></i>
+              <h5 class="card-title mt-3">Acessibilidade</h5>
+              <p class="card-text">
+                Criar ambientes acessíveis para todas as pessoas, incluindo
+                aquelas com deficiência.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <i class="bi bi-people-fill fs-1 text-success"></i>
+              <h5 class="card-title mt-3">Diversidade</h5>
+              <p class="card-text">
+                Valorização das diferenças culturais, sociais e econômicas para
+                um mundo mais inclusivo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <i class="bi bi-house-door-fill fs-1 text-danger"></i>
+              <h5 class="card-title mt-3">Moradia e Trabalho</h5>
+              <p class="card-text">
+                Garantia de condições dignas de moradia e acesso ao mercado de
+                trabalho para todos.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Cidadania Ativa. Todos os direitos reservados.</p>
-  </footer>
+    <!-- Accordion com Mais Conteúdo sobre Inclusão Social -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Explorando a Inclusão Social</h2>
+      <div class="accordion" id="accordionInclusaoSocial">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+            >
+              Conceito e Importância
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionInclusaoSocial"
+          >
+            <div class="accordion-body">
+              <p>
+                A inclusão social é um princípio fundamental para garantir que
+                todas as pessoas tenham acesso igualitário a direitos, recursos
+                e oportunidades. Isso envolve eliminar barreiras que impedem a
+                participação plena de indivíduos em situações de
+                vulnerabilidade.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+            >
+              Desafios na Sociedade
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionInclusaoSocial"
+          >
+            <div class="accordion-body">
+              <p>
+                Apesar dos avanços, a exclusão social ainda é um grande
+                problema. Pessoas com deficiência, idosos, minorias étnicas e
+                comunidades marginalizadas enfrentam desafios como falta de
+                acessibilidade, discriminação e oportunidades desiguais no
+                mercado de trabalho.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+            >
+              Iniciativas e Soluções
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionInclusaoSocial"
+          >
+            <div class="accordion-body">
+              <p>
+                Para promover a inclusão, governos, ONGs e empresas estão
+                desenvolvendo programas de acessibilidade, políticas públicas de
+                equidade e incentivos para a inclusão no mercado de trabalho. A
+                educação inclusiva e a conscientização social são fundamentais
+                para mudar essa realidade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Depoimentos -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+        <h2>Depoimentos</h2>
+        <blockquote class="blockquote">
+          <p>
+            "A inclusão social me deu oportunidades que antes pareciam
+            impossíveis, abrindo portas para um futuro melhor."
+          </p>
+          <footer class="blockquote-footer">Maria Oliveira</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p>&copy; 2025 Cidadania Ativa. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
