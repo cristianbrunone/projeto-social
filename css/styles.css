@@ -25,7 +25,7 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   width: 100%;
   height: 100vh; /* Definir a altura completa da tela */
   overflow: hidden;
-  background-image: url("../assets/home.jpg");
+  background-image: url("../assets/imigration.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -33,32 +33,27 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 /* ==========================
    NAVBAR (POSICIONADO EM CIMA DA IMAGEM)
    ========================== */
-.navbar {
-  position: fixed; /* Fixa a navbar no topo */
-  width: 100%;
-  bottom: 2px;
-  left: 0;
-  z-index: 100;
-  background: transparent;
-}
+   .navbar {
+    position: fixed; /* Fixa a navbar no topo */
+    width: calc(100% - 20%); /* Subtrai 20% (10% à esquerda + 10% à direita) */
+    top: 5px;
+    left: 10%; /* Margem de 10% à esquerda */
+    right: 10%; /* Margem de 10% à direita */
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 50px;
+    background-color: #b1afaf88;
+  }
+
+  .paginas-navbar  {
+    background-color: #303f9f; /* Cor diferente para esta página */
+  }
+
+
+
 
 /* Container Flutuante com efeito backdrop-filter */
-.floating-container {
-  position: fixed; /* Alterado para fixed para garantir que fique fixo no topo */
-  top: 20px; /* Ajuste para posicionar a navbar o mais no topo possível */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%; /* Ajustado para largura total */
-  max-width: 80%; /* Maximiza a largura em telas grandes */
-  height: 6%;
-  padding: 15px; /* Menos espaçamento para melhorar o visual */
-  background: rgba(117, 117, 117, 0.3); /* Fundo semitransparente */
-  border-radius: 50px; /* Bordas arredondadas com raio de 50px */
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px); /* Suporte para Safari */
-  z-index: 1040; /* Posicionado abaixo da navbar (z-index 1050) */
-  text-align: center;
-}
 
 .corHome {
   color: #303f9f;
@@ -74,22 +69,6 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   color: #ffff;
 }
 
-.floating-container2 {
-  position: fixed; /* Alterado para fixed para garantir que fique fixo no topo */
-  top: 20px; /* Ajuste para posicionar a navbar o mais no topo possível */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%; /* Ajustado para largura total */
-  max-width: 80%; /* Maximiza a largura em telas grandes */
-  height: 6%;
-  padding: 15px; /* Menos espaçamento para melhorar o visual */
-  background: #303f9f; /* Fundo semitransparente */
-  border-radius: 50px; /* Bordas arredondadas com raio de 50px */
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px); /* Suporte para Safari */
-  z-index: 1040; /* Posicionado abaixo da navbar (z-index 1050) */
-  text-align: center;
-}
 
 /* ==========================
    HERO COM SOBREPOSIÇÃO NA IMAGEM
@@ -220,22 +199,4 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   cursor: pointer;
 }
 
-/* ==========================
-   RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS
-   ========================== */
-@media (max-width: 767px) {
-  .floating-container {
-    width: 100%; /* Largura menor em dispositivos móveis */
-    height: 7%;
-    top: 10px;
-  }
 
-  .navbar {
-    position: fixed; /* Fixa a navbar no topo */
-    width: 100%;
-    top: 3px;
-    left: 0;
-    z-index: 100;
-    background: transparent;
-  }
-}
