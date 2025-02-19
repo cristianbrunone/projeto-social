@@ -5,10 +5,9 @@ body {
   font-family: "Playfair Display", serif;
   background-color: #f2f2f2;
   overflow-y: scroll;
-  color: #616161; /* Cor de texto cinza */
+  color: #616161;
 }
 
-/* Aplica a fonte "Poppins" para títulos, parágrafos, links e botões */
 h1,
 h2,
 h3,
@@ -16,6 +15,10 @@ p,
 a,
 button {
   font-family: "Playfair Display", serif;
+}
+
+.textColor {
+  color: #616161;
 }
 
 /* ==========================
@@ -33,27 +36,28 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 /* ==========================
    NAVBAR (POSICIONADO EM CIMA DA IMAGEM)
    ========================== */
-   .navbar {
-    position: fixed; /* Fixa a navbar no topo */
-    width: calc(100% - 20%); /* Subtrai 20% (10% à esquerda + 10% à direita) */
-    top: 5px;
-    left: 10%; /* Margem de 10% à esquerda */
-    right: 10%; /* Margem de 10% à direita */
-    z-index: 100;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border-radius: 50px;
-    background-color: #b1afaf88;
-  }
+.navbar {
+  position: fixed;
+  width: calc(100% - 20%);
+  top: 5px;
+  left: 10%;
+  right: 10%;
+  z-index: 100;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 2px;
+  background-color: #b1afaf88;
+}
 
-  .paginas-navbar  {
-    background-color: #303f9f; /* Cor diferente para esta página */
-  }
+.paginas-navbar {
+  background-color: #303f9f;
+}
 
-
-
-
-/* Container Flutuante com efeito backdrop-filter */
+.custom-hr {
+  border: none; /* Quita la línea predeterminada */
+  border-top: 5px solid black; /* Define una línea negra de 5px de grosor */
+  margin: 50px 10%; /* Márgenes superior/inferior de 50px y laterales de 10% */
+}
 
 .corHome {
   color: #303f9f;
@@ -68,7 +72,6 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   background-color: #911111;
   color: #ffff;
 }
-
 
 /* ==========================
    HERO COM SOBREPOSIÇÃO NA IMAGEM
@@ -85,24 +88,19 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   text-align: center;
   font-size: 10px;
   color: white;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Sobreposição escura para melhorar a leitura */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-title {
-  font-size: 4rem; /* Aumenta o tamanho do título */
-  font-weight: 900; /* Deixa o texto bem pesado */
-  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destacar */
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
-  font-size: 1.5rem; /* Aumenta o tamanho do subtítulo */
-  font-weight: 700; /* Peso médio-alto para diferenciar do título */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra suave */
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero .content {
@@ -116,11 +114,10 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 10px;
-  border: 1px solid #f5f5dc; /* Bordas sutis usando bege */
-  background-color: #ffffff; /* Fundo branco para os cards */
+  border: 1px solid #f5f5dc;
+  background-color: #ffffff;
 }
 
-/* Efeito ao passar o mouse sobre os cards */
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -132,7 +129,7 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 .login-page {
   position: relative;
   background: url("../assets/igualdade.png") no-repeat center center/cover;
-  height: 100vh; /* ou o tamanho desejado */
+  height: 100vh;
 }
 
 .login-page::before {
@@ -159,8 +156,13 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   border-radius: 15px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  transition: backdrop-filter 0.3s ease; /* Suavizar transição */
 }
 
+.login-card:hover {
+  backdrop-filter: none; /* Desabilitar blur no hover */
+  -webkit-backdrop-filter: none; /* Desabilitar blur no hover */
+}
 /* ==========================
    CAMPOS DE LOGIN E INPUTS
    ========================== */
@@ -169,7 +171,7 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 .input-group {
   border: 1px solid #ced4da;
   border-radius: 8px;
-  overflow: hidden; /* Evita bordas separadas nos elementos internos */
+  overflow: hidden;
 }
 
 /* Estilização do ícone dentro do input (ex: ícone de usuário/senha) */
@@ -178,19 +180,19 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   border: none;
   padding: 10px 15px;
   font-size: 1.2rem;
-  color: #616161; /* Cor de texto cinza para o ícone */
+  color: #616161;
 }
 
 /* Ajuste nos campos de entrada dentro do grupo */
 .input-group .form-control {
   border: none;
   padding: 10px;
-  box-shadow: none; /* Remove sombras indesejadas */
+  box-shadow: none;
 }
 
 /* Efeito ao focar no campo de entrada */
 .input-group:focus-within {
-  border-color: #616161; /* Cor de borda cinza ao focar */
+  border-color: #616161;
   box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
 }
 
@@ -198,5 +200,3 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 .toggle-password {
   cursor: pointer;
 }
-
-

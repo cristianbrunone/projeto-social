@@ -54,30 +54,96 @@
     </div>
 
     <!-- Imagem de Destaque -->
-    <div class="container text-center text-white pt-5">
-      <h1 class="text-dark mt-4 pt-5 display-5">
-        Recursos e Suporte
-      </h1>
-      <p class="text-secondary">
+    <div class="container text-center text-white pt-4">
+      <h1 class="text-dark mt-4 pt-5 display-6">Recursos e Suporte</h1>
+      <p class="textColor">
         Encontre organizações e centros de apoio para facilitar sua integração.
       </p>
     </div>
 
-    <!-- Seção de Informações -->
     <section class="container my-5">
       <div class="row align-items-center">
-        <div class="col-md-6">
-          <h2 class="text-secondary pt-4">Organizações de Apoio</h2>
-          <p class="text-secondary">
-            Diversas instituições públicas e ONGs oferecem suporte jurídico, social e educacional para imigrantes e refugiados. Esses serviços auxiliam na regularização documental, na adaptação cultural e na integração ao mercado de trabalho.
-          </p>
-          <p>
-            Entre as organizações de destaque, encontram-se centros de acolhimento e associações dedicadas à defesa dos direitos dos imigrantes.
-          </p>
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="card-body">
+            <h2 class="textColor pt-4">Formulario para Duvidas</h2>
+            <form id="formDúvidas">
+              <!-- Alerta de erro global -->
+              <div
+                id="alertaErro"
+                class="alert alert-danger d-none"
+                role="alert"
+              >
+                Preencha todos os campos corretamente!
+              </div>
+              <div class="mb-3">
+                <label for="nome" class="form-label text-dark"
+                  >Nome Completo</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  placeholder="Nome Sobrenome"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, insira seu nome completo.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="celular" class="form-label text-dark"
+                  >Celular</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="celular"
+                  placeholder="(00) 00000-0000"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, insira um número de celular válido.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="nacionalidade" class="form-label text-dark"
+                  >Nacionalidade</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nacionalidade"
+                  placeholder="Ex: Venezuelano"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, insira sua nacionalidade.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="duvida" class="form-label text-dark"
+                  >Sua Dúvida</label
+                >
+                <textarea
+                  class="form-control"
+                  id="duvida"
+                  rows="4"
+                  placeholder="Descreva sua dúvida aqui..."
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Por favor, descreva sua dúvida.
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success btn-lg">
+                Enviar
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12">
           <img
-            src="assets/suporte.jpg"
+            src="assets/apoio.jpg"
             class="img-fluid rounded"
             alt="Recursos e Suporte"
           />
@@ -87,15 +153,34 @@
 
     <!-- Cards Informativos -->
     <section class="container my-5">
-      <h2 class="text-center mb-4">Áreas de Suporte</h2>
+      <h2 class="text-center text-dark mb-4">Áreas de Suporte</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card h-100">
             <div class="card-body d-flex flex-column">
-              <i class="bi bi-telephone-fill fs-1 text-primary"></i>
-              <h5 class="card-title mt-3">Atendimento Jurídico</h5>
+              <i class="bi bi-hospital-fill fs-1 text-primary"></i>
+              <h5 class="card-title mt-3">Saúde</h5>
+              <strong>Hospital Municipal São José – HMSJ:</strong>
               <p class="card-text">
-                Encontre assistência especializada para questões legais relacionadas à imigração.
+                Rua Getúlio Vargas, 238 Bucarein Joinville – SC (47) 3441-6666
+              </p>
+              <strong>PA Norte:</strong>
+              <p class="card-text">
+                Rua Guilherme, 640 Costa e Silva Joinville – SC (47) 3419-9150
+              </p>
+              <strong>UPA Sul:</strong>
+              <p class="card-text">
+                Rua Monsenhor Gercino, s/n João Costa Joinville – SC (47)
+                3466-0055
+              </p>
+              <strong>UPA Leste:</strong>
+              <p class="card-text">
+                Rua Mafalda Laurindo, 262 Aventureiro Joinville – SC (47)
+                3435-4221
+              </p>
+              <strong>Maternidade Darcy Vargas:</strong>
+              <p class="card-text">
+                Rua: Miguel Couto, 44 Anita Garibaldi (47) 3461-5700
               </p>
             </div>
           </div>
@@ -104,9 +189,37 @@
           <div class="card h-100">
             <div class="card-body d-flex flex-column">
               <i class="bi bi-chat-dots-fill fs-1 text-success"></i>
-              <h5 class="card-title mt-3">Suporte Social</h5>
+              <h5 class="card-title mt-3">Instituições não governamentais</h5>
+              <strong>Centro Integrado João de Paula</strong>
               <p class="card-text">
-                Acesse orientações para superar desafios de adaptação e barreiras culturais.
+                Rua Quinze de Novembro, 3165 Glória (47) 3453-0588 Atendimentos
+                com auxílio de cesta básica, bazar, etc
+              </p>
+              <strong
+                >Projeto Acolhidos - Igreja do Evangelho Quadrangular</strong
+              >
+              <p class="card-text">
+                Rua Dona Francisca, 3144 Saguaçú (47) 3801-4163 Atendimentos com
+                auxílio alimentação, bazar, etc.
+              </p>
+              <strong>Casa Padre Pio</strong>
+              <p class="card-text">
+                Rua José Silveira Lopes, 1250 Espinheiros - Moinho 2 (47)
+                3434-2188 Atendimento social: acolhimento, orientação e enc
+              </p>
+              <strong>Associação Esperança Viva</strong>
+              <p class="card-text">
+                Presidente: Guilove Augustin Payoute (47) 99785-4865 A
+                Associação não possui sede própria, necessário fazer
+                inicialmente contato por telefone
+              </p>
+              <strong
+                >Associação Inovação da Serenidade Coletiva dos Haitianos de
+                Joinville</strong
+              >
+              <p class="card-text">
+                Presidente: Neptune Duval (47) 99632-1867 Orientação presencial
+                e/ou por telefone
               </p>
             </div>
           </div>
@@ -116,8 +229,35 @@
             <div class="card-body d-flex flex-column">
               <i class="bi bi-mortarboard-fill fs-1 text-danger"></i>
               <h5 class="card-title mt-3">Educação e Idioma</h5>
+              <strong
+                >CEJA – Educação de Jovens e Adultos Curso de Português</strong
+              >
               <p class="card-text">
-                Descubra cursos de idioma e programas educacionais que promovem a integração.
+                Rua Alexandre Schlemm, 110 Bucarein Anexo antigo prédio da
+                Escola Rui Barbosa As aulas acontecem no período noturno.
+                Possuem lista de interessados. Horário de Atendimento: 7h30 às
+                11h30 13h30 às 17h30 18h30 às 22h 3432-1492 I 3431-1467
+              </p>
+              <strong
+                >EJA – Escola de Jovens e Adultos Aula de Português para
+                Migrantes Internacionais</strong
+              >
+              <p class="card-text">
+                Endereço: Centro Educacional e Social do Itaum – Cesita, Rua
+                Monsenhor Gercino, 1040, Itaum. As aulas ocorrerão sempre às
+                segundas- -feiras, entre 13h30 e 17h. As inscrições devem ser
+                feitas presencialmente na Escola de Jovens e Adultos, das 7h ao
+                meio-dia, das 13h30 às 17h e das 19h às 22h. Mais informações
+                podem ser solicitadas pelo telefone (47) 3426-3354.
+              </p>
+              <strong>
+                Projeto Imigrante Cidadão – Centro Universitário Católica de
+                Santa Catarin
+              </strong>
+              <p class="card-text">
+                Aulas de Português Básico e intermediário Centro Universitário
+                Católica de Santa Catarina Sábados I 13h30 às 17h Mais
+                Informações: Jucerlei - 47 99640-7389 pc.joi@catolicasc.edu.br
               </p>
             </div>
           </div>
@@ -127,7 +267,7 @@
 
     <!-- Accordion com Mais Recursos -->
     <section class="container my-5">
-      <h2 class="text-center mb-4">Mais Recursos</h2>
+      <h2 class="text-center text-dark mb-4">Centros de Atendimento</h2>
       <div class="accordion" id="accordionSuporte">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -137,7 +277,7 @@
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
             >
-              Centros de Atendimento
+              Emprego, Meios de subsistência e Geração de Renda
             </button>
           </h2>
           <div
@@ -147,7 +287,27 @@
           >
             <div class="accordion-body">
               <p>
-                Consulte a lista de centros de atendimento que oferecem suporte presencial e online para orientação e regularização.
+                <strong>CEPAT</strong><br />
+                Programa de Inclusão Rua Abdon Batista, 342<br />
+                Centro<br />
+                (47) 3467-0978 I 8h às 14h<br />
+                Rua Abdon Batista, 342<br />
+                Vagas de Emprego, orientação seguro-desemprego, carteira
+                digital.<br /><br />
+
+                <strong>SINE</strong><br />
+                ED. Manchester<br />
+                Rua do Príncipe, 330<br />
+                11 andar - sala 1101<br />
+                Centro<br /><br />
+
+                <strong>CEPAT - Serviço de Incentivo</strong><br />
+                a Organizações Produtivas;<br />
+                SAT - Serviço de Atendimento ao Trabalhador<br />
+                Rua Abdon Batista, 342<br />
+                Centro<br />
+                (47) 3467-0978 I 8h às 14h<br /><br />
+                Atividades voltadas a Economia Solidária, Feiras, cursos, etc.
               </p>
             </div>
           </div>
@@ -160,7 +320,7 @@
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
             >
-              Contatos e Redes de Apoio
+              Documentação e Regularização Migratória
             </button>
           </h2>
           <div
@@ -169,8 +329,17 @@
             data-bs-parent="#accordionSuporte"
           >
             <div class="accordion-body">
+              <strong>Polícia Federal</strong><br />
               <p>
-                Encontre contatos de organizações, ONGs e grupos comunitários que oferecem apoio contínuo e informações atualizadas.
+                Avenida Rolf Wiest, 333 Bom Retiro - Alameda de Serviço Setor de
+                Imigração - Garten Shopping 3431-6820 I segunda a sexta-feira I
+                10h às 17h Atendimento por agendamento pae.jve.sc@pf.gov.br
+              </p>
+              <strong>Defensoria Pública da União</strong><br />
+              <p>
+                Rua Araranguá, 280 América, Joinville 3422-4896 I segunda a
+                sexta-feira 9h às 12h e das 13h às 17h30. O e-mail para retorno
+                e envio de documentos: dpu.joinville@dpu.def.br.
               </p>
             </div>
           </div>
@@ -183,7 +352,7 @@
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
             >
-              Programas de Integração
+              Atendimento Jurídico Gratuito
             </button>
           </h2>
           <div
@@ -192,8 +361,42 @@
             data-bs-parent="#accordionSuporte"
           >
             <div class="accordion-body">
+              <strong>Defensoria Pública Estadual</strong><br />
+              <p>Rua Blumenau, 953 América (47) 99216-0073 (47) 99224-3801</p>
               <p>
-                Conheça os programas e iniciativas voltados para facilitar a adaptação e a integração de imigrantes na sociedade brasileira.
+                Agendamento por email: atendimentojoinville@defensoria.sc.gov.br
+                Primeiro atendimento: (47) 99216-0073 (47) 99224-3801 I (47)
+                99144-3362
+              </p>
+              <strong
+                >CDH – Centro de Direitos Humanos Maria da Graça Bráz</strong
+              ><br />
+              <p>
+                Rua Dr. Plácido Olímpio de Oliveira, 660 Bucarein (47) 3025-3447
+                I segunda a sexta 13h30 às 17h30 Agendamento por whatsapp /
+                celular: (47) 99172 - 8881
+              </p>
+              <strong
+                >CDH – Centro de Direitos Humanos Maria da Graça Bráz</strong
+              ><br />
+              <p>
+                Rua São José, 490 Anita Garibaldi (47) 3026-8258 I segunda a
+                sexta 8h às 12h e das 14h às 18h Agendamento por email ou
+                telefone, segunda a sexta I 8h às 12h e das 14h às 18h
+                npj@fgg.edu.br ou fone (47) 3026-8258
+              </p>
+              <strong>Núcleo de Prática Jurídica Unisociesc</strong><br />
+              <p>
+                Rua Albano Schmidt, 3333 Boa Vista (47) 3461 0169
+                Preferencialmente agendamento por telefone, mas também atende
+                presencial se for preciso, de segunda a sexta-feira, das 8h às
+                12h e das 13h30 às 17h
+              </p>
+              <strong>Núcleo de Prática Jurídica Univille</strong><br />
+              <p>
+                Rua Paulo Malschitzki Zona Industrial Norte (47) 3461-9123 I
+                segunda a sexta-feira 8h às 12h e das 13h30 às 18h Agendamento
+                pelo email ou por telefone: emaj@univille.br I (47) 3461-9123
               </p>
             </div>
           </div>
@@ -204,10 +407,11 @@
     <!-- Depoimentos -->
     <section class="bg-light py-5">
       <div class="container text-center">
-        <h2>Depoimentos</h2>
+        <h2 class="text-dark">Depoimentos</h2>
         <blockquote class="blockquote">
           <p>
-            "O suporte oferecido por essas organizações me ajudou a superar desafios e a me integrar rapidamente ao novo ambiente."
+            "O suporte oferecido por essas organizações me ajudou a superar
+            desafios e a me integrar rapidamente ao novo ambiente."
           </p>
           <footer class="blockquote-footer">Fernanda R.</footer>
         </blockquote>
@@ -222,7 +426,7 @@
     </footer>
 
     <!-- Bootstrap JS Bundle -->
+    <script src="./js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
