@@ -1,11 +1,19 @@
 /* ==========================
    CONFIGURAÇÃO GLOBAL 
    ========================== */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+   
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Merriweather", serif;
   background-color: #f2f2f2;
   overflow-y: scroll;
   color: #616161;
+  margin: 0;
 }
 
 h1,
@@ -14,11 +22,11 @@ h3,
 p,
 a,
 button {
-  font-family: "Playfair Display", serif;
+  font-family: "Merriweather", serif;
 }
 
 .textColor {
-  color: #616161;
+  color: #575656;
 }
 
 /* ==========================
@@ -31,33 +39,47 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   background-image: url("../assets/imigration.jpg");
   background-size: cover;
   background-position: center;
+  border-radius: 5px;
+}
+
+.container-global {
+  width: 100%; /* Deixa uma margem de 8.5% de cada lado */
+  margin: auto; /* Centraliza automaticamente */
 }
 
 /* ==========================
    NAVBAR (POSICIONADO EM CIMA DA IMAGEM)
    ========================== */
-.navbar {
-  position: fixed;
-  width: calc(100% - 20%);
-  top: 5px;
-  left: 10%;
-  right: 10%;
-  z-index: 100;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border-radius: 2px;
-  background-color: #b1afaf88;
-}
-
+   .navbar {
+    width: 100%; /* Define a largura, deixando 10% de margem de cada lado */
+    left: 0;
+    right: 0;
+    margin: auto; /* Centraliza automaticamente */
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    background-color: #b1afaf88;
+  }
+  
 .paginas-navbar {
   background-color: #303f9f;
 }
 
-.custom-hr {
-  border: none; /* Quita la línea predeterminada */
-  border-top: 5px solid black; /* Define una línea negra de 5px de grosor */
-  margin: 50px 10%; /* Márgenes superior/inferior de 50px y laterales de 10% */
+.index-page .navbar {
+  position: fixed;
 }
+
+.pagina-normal .navbar {
+  position: relative; /* ou static */
+}
+
+.navbar, 
+.navbar * {
+  font-family: "Poppins", sans-serif !important;
+}
+
+
+
 
 .corHome {
   color: #303f9f;
@@ -200,3 +222,7 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 .toggle-password {
   cursor: pointer;
 }
+
+
+
+
