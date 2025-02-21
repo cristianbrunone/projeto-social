@@ -51,15 +51,27 @@
               </li>
 
             </ul>
-               <button id="toggle-language" class="btn btn-outline-light ms-3">ES</button>
-              </div>
-              </div>
-            </nav>
-       </div>
+                <!-- Google Translate Button -->
+            <div id="google_translate_element" class="ms-3"></div>
+          </div>
+        </div>
+      </nav>
     </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'pt',
+          includedLanguages: 'en,es,fr,de,it,pt', // Lista de idiomas que você deseja incluir
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
          
 
-  
     
 
     <!-- Imagem de Destaque -->
@@ -334,6 +346,7 @@
         <p class="card-text">&copy; 2025 Imigração Ativa. Todos os direitos reservados.</p>
       </div>
     </footer>
+    
 
     <!-- Bootstrap JS Bundle -->
      <script src="js/scripts.js"></script>

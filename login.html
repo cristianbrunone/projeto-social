@@ -15,41 +15,61 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body class="login-page">
-      <!-- Navbar -->
-   <!-- Navbar -->
-   <div class="floating-container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Imigração Ativa</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="documentacao.html">Documentação</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="direitos.html">Direitos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="suporte.html">Recursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="login.html">Login</a>
-            </li>
-          </ul>
+    <!-- Navbar -->
+    <div class="floating-container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">Imigração Ativa</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="documentacao.html">Documentação</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="direitos.html">Direitos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="suporte.html">Recursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="login.html">Login</a>
+              </li>
+            </ul>
+            <!-- Google Translate Button -->
+            <div id="google_translate_element" class="ms-3"></div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "pt",
+            includedLanguages: "en,es,fr,de,it,pt", // Lista de idiomas que você deseja incluir
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
 
     <!-- Formulário de Login -->
     <div
