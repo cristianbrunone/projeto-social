@@ -3,8 +3,7 @@
    ========================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
   font-family: "Inter", sans-serif;
@@ -20,12 +19,17 @@ h3,
 p,
 a,
 button {
-  font-family: "Merriweather", serif;font-family: "Inter", sans-serif;
-
+  font-family: "Merriweather", serif;
+  font-family: "Inter", sans-serif;
 }
 
 .textColor {
   color: #575656;
+}
+
+.color-depoimento {
+  border-top: #b4b4b4 solid 0.1px;
+  background-color: #ffffff;
 }
 
 /* ==========================
@@ -123,19 +127,17 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 
 .title-page {
   font-size: 1.8rem;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 .title-page-2 {
   font-size: 1.4rem;
-  font-weight: 500; 
+  font-weight: 500;
 }
-
 
 .subtitle-page {
   font-size: 0.9rem;
   font-weight: 400;
-  
 }
 
 .hero .content {
@@ -153,11 +155,11 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
   background-color: #ffffff;
 }
 
-.card-title{
+.card-title {
   font-size: 1rem;
 }
 
-.card-text{
+.card-text {
   font-size: 0.9rem;
 }
 
