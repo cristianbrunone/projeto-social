@@ -10,7 +10,7 @@ body {
   background-color: #f2f2f2;
   overflow-y: scroll;
   color: #616161;
-  margin: 0;
+  margin: 0 auto;
 }
 
 
@@ -38,24 +38,11 @@ button {
 /* Personalização da Caixa do Google Tradutor */
 #google_translate_element {
   display: inline-block;
-  border-radius: 50px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
-.goog-te-gadget {
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  color: #333;
-}
 
-.goog-te-gadget .goog-te-combo {
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #f8f9fa;
-  font-size: 14px;
-  cursor: pointer;
-}
 
 
 /* Esconder o botão de tradução automática */
@@ -79,7 +66,7 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 
 .container-global {
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* ==========================
@@ -98,19 +85,19 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 
 .paginas-navbar {
   background-color: #303f9f;
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  
 }
 
 .index-page .navbar {
   position: fixed;
 }
-
-.pagina-normal .navbar {
-  position: relative;
-}
-
 .navbar,
 .navbar * {
   font-family: "Poppins", sans-serif !important;
+  
 }
 
 .corHome {
