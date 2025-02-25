@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Aplicando máscara ao campo de celular (requere jQuery e inputmask)
+  if (typeof $ !== "undefined") {
+    $("#celular").inputmask("(99) 99999-9999");
+  }
+
   // Verifica se o botão de mostrar/ocultar senha existe
   const togglePassword = document.querySelector(".toggle-password");
   if (togglePassword) {
@@ -50,14 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let formIsValid = true;
 
-      if (nome.value.trim() === "") {
+      // Validação de nome completo (mínimo de duas palavras)
+      const nomePattern = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:\s[A-Za-zÀ-ÖØ-öø-ÿ]+)+$/;
+      if (!nomePattern.test(nome.value.trim())) {
         nome.classList.add("is-invalid");
         formIsValid = false;
       } else {
         nome.classList.remove("is-invalid");
       }
 
-      const celularPattern = /^\(\d{2}\)\s\d{5}-\d{4}$/;
+      // Validação de celular válido do Brasil (DDD entre 11 e 99 + número válido)
+      const celularPattern = /^\((1[1-9]|2[1-9]|3[1-9]|4[1-9]|5[1-9]|6[1-9]|7[1-9]|8[1-9]|9[1-9])\)\s9\d{4}-\d{4}$/;
       if (!celularPattern.test(celular.value)) {
         celular.classList.add("is-invalid");
         formIsValid = false;
@@ -84,11 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         alertaErro.classList.add("d-none");
         alert("Formulário enviado com sucesso!");
+        
         // Limpa os campos após o envio
-        nome.value = "";
-        celular.value = "";
-        nacionalidade.value = "";
-        duvida.value = "";
+        formDuvidas.reset();
       }
     });
   }
