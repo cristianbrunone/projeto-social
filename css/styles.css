@@ -86,9 +86,14 @@ CONTAINER DA IMAGEM DE FUNDO ========================== */
 .paginas-navbar {
   background-color: #303f9f;
   position: fixed;
+  transition: transform 0.5s ease-in-out;
   margin: 0 auto;
   top: 0;
   
+}
+
+.nav-hide {
+  transform: translateY(-100%);
 }
 
 .index-page .navbar {
