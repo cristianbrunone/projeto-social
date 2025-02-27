@@ -1,6 +1,6 @@
 # Imigração Ativa - Suporte para Imigrantes no Brasil
 
-![Preview](assets/preview.jpg)
+![Captura de Tela Principal](https://github.com/cristianbrunone/projeto-social/blob/main/css/capture_screen.png)
 
 > Plataforma informativa para auxiliar imigrantes na regularização documental, acesso a direitos e integração no Brasil.
 
